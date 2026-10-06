@@ -17,11 +17,6 @@ public class PedidoEstadoPago extends PedidoEstado {
         return true;
     }
 
-    public boolean entregar(Pedido pedido) {
-        pedido.setEstado(PedidoEstadoEntregue.getInstance());
-        return true;
-    }
-
     public boolean cancelar(Pedido pedido) {
         pedido.setEstado(PedidoEstadoCancelado.getInstance());
         return true;

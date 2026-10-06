@@ -54,10 +54,9 @@ public class PedidoTest {
     }
 
     @Test
-    public void deveEntregarPedidoPago() {
+    public void naoDeveEntregarPedidoPago() {
         pedido.setEstado(PedidoEstadoPago.getInstance());
-        assertTrue(pedido.entregar());
-        assertEquals(PedidoEstadoEntregue.getInstance(), pedido.getEstado());
+        assertFalse(pedido.entregar());
     }
 
     @Test
